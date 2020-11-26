@@ -17,13 +17,13 @@ pip install pygtk-sane
 Console:
 
 ```
-pgscan scan.png
+pscan scan.png
 ```
 
-GUI:
+GUI (background):
 
 ```
-pygtk-sane &
+pgscan &
 ```
 
 ## Copyright and License
