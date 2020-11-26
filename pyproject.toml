@@ -1,0 +1,21 @@
+[tool]
+
+[tool.poetry]
+
+authors = ["Jeremy A Gray <jeremy.a.gray@gmail.com>"]
+description = "PyGTK-SANE:  GTK and CLI frontend for SANE scanning"
+name = "pygtk-sane"
+version = "0.0.1"
+
+[tool.poetry.dependencies]
+
+Pillow = "^8.0"
+PyGObject = "^3.38"
+pycairo = "^1.20"
+python = "^3.8"
+python-sane = "^2.8"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.1"
+pytest-cov = "^2.10"
+pytest-flake8 = "^1.0"
