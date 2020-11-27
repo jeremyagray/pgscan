@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 #
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
 # pgscan.py:  The GTK frontend of pgscan.
 #
 # pgscan:  a Python/GTK SANE front-end

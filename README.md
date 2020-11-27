@@ -28,6 +28,8 @@ pgscan &
 
 ## Copyright and License
 
+SPDX-License-Identifier: GPL-3.0-or-later
+
 pgscan, a Python/GTK front-end for SANE.
 Copyright (C) 2020 Jeremy A Gray <jeremy.a.gray@gmail.com>.
 
