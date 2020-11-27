@@ -2,7 +2,7 @@ import datetime
 
 
 class License:
-    def __init__(self, project, author, email, id, year=0):
+    def __init__(self, project, author, email, id='gpl', year=0):
         self.project = project
         self.author = author
         self.email = email
@@ -10,30 +10,25 @@ class License:
         self.text = get_license_text(id)
 
         if year == 0:
-            self.year = datetime.today()
+            self.date = datetime.date.today()
         else:
-            self.year = datetime.date(year, 1, 1)
+            self.date = datetime.date.date(year, 1, 1)
+
+        self.year = self.date.year
 
     def about(self):
-        s = r'''{project}:  Copyright (C) {year} {author} <{email}>.
+        s = rf'''{self.project}:  Copyright (C) {self.year} {self.author} <{self.email}>.
 This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
 This is free software, and you are welcome to redistribute it
-under certain conditions; type `show c' for details.
-'''
+under certain conditions; type `show c' for details.'''
 
-        return s.format(project=self.project,
-                        year=self.year.year,
-                        author=self.author,
-                        email=self.email)
+        return s
 
     def copyright(self):
-        s = r'''{project}:  Copyright (C) {year} {author} <{email}>.
-'''
+        s = rf'''{self.project}:  Copyright (C) {self.year} '''\
+            '''{self.author} <{self.email}>.'''
 
-        return s.format(project=self.project,
-                        year=self.year.year,
-                        author=self.author,
-                        email=self.email)
+        return s
 
     def warranty(self):
         return r'''  15. Disclaimer of Warranty.
@@ -70,8 +65,8 @@ copy of the Program in return for a fee.
 '''
 
     def conditions(self):
-        s = r'''{project}:  a Python/GTK and CLI SANE front-end.
-Copyright (C) {year} {author} <{email}>.
+        s = rf'''{self.project}:  a Python/GTK and CLI SANE front-end.
+Copyright (C) {self.year} {self.author} <{self.email}>.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -84,13 +79,9 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
 General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>.
-'''
+along with this program.  If not, see <https://www.gnu.org/licenses/>.'''
 
-        return s.format(project=self.project,
-                        year=self.year.year,
-                        author=self.author,
-                        email=self.email)
+        return s
 
 
 def get_license_text(id):
@@ -767,7 +758,6 @@ into proprietary programs.  If your program is a subroutine library, you
 may consider it more useful to permit linking proprietary applications with
 the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
-<https://www.gnu.org/licenses/why-not-lgpl.html>.
-'''
+<https://www.gnu.org/licenses/why-not-lgpl.html>.'''
 
     return s
