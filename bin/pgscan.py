@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 #
-# pygtk-sane:  a Python/GTK SANE front-end
+# pgscan.py:  The GTK frontend of pgscan.
+#
+# pgscan:  a Python/GTK SANE front-end
 # Copyright (C) 2020 Jeremy A Gray <jeremy.a.gray@gmail.com>.
 #
 # This program is free software: you can redistribute it and/or modify
@@ -48,7 +50,7 @@ def get_device_names():
 
 class PGSaneWindow(Gtk.Window):
     def __init__(self):
-        super().__init__(title="pyGTK-SANE")
+        super().__init__(title="pgscan")
 
         self.box = Gtk.Box(spacing=6)
         self.add(self.box)

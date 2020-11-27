@@ -3,8 +3,8 @@
 [tool.poetry]
 
 authors = ["Jeremy A Gray <jeremy.a.gray@gmail.com>"]
-description = "PyGTK-SANE:  GTK and CLI frontend for SANE scanning"
-name = "pygtk-sane"
+description = "pgscan:  GTK and CLI frontend for SANE scanning"
+name = "pgscan"
 version = "0.0.1"
 
 [tool.poetry.dependencies]

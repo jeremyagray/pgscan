@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 #
-# pygtk-sane:  a Python/GTK SANE front-end
+# pscan.py:  The CLI frontend of pgscan.
+#
+# pgscan:  a Python/GTK SANE front-end
 # Copyright (C) 2020 Jeremy A Gray <jeremy.a.gray@gmail.com>.
 #
 # This program is free software: you can redistribute it and/or modify
@@ -19,17 +21,8 @@
 import sane
 from PIL import Image
 
-def about():
-    project='pyGTK-sane'
-    year=2020
-    author='Jeremy A Gray'
-    email='jeremy.a.gray@gmail.com'
-    s = rf'''{project}:  Copyright (C) {year} {author} <{email}>.
-This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
-This is free software, and you are welcome to redistribute it
-under certain conditions; type `show c' for details.'''
-
-    return s
+sys.path.insert(0, '/home/gray/src/work/pgscan/pgscan')
+from license import License  # noqa
 
 def init():
     # Initialize.
@@ -47,9 +40,7 @@ def get_devices():
 
 
 if __name__ == '__main__':
-    # print(about())
-    # l = License('PyGTK=SANE', 'Jeremy A Gray', 'jeremy.a.gray@gmail.com')
-    # print(l.about())
+    print(License('pgscan', 'Jeremy A Gray', 'jeremy.a.gray@gmail.com'))
     sane.init()
 
     devices = get_devices()

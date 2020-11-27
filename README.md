@@ -1,15 +1,15 @@
-# PyGTK-Sane
+# pgscan
 
 A small Python/GTK and Python script front-end for SANE.
 
-## What is PyGTK-SANE?
+## What is pgscan?
 
-PyGTK-Sane is a pair of programs with a common internal interface.  Both are front-ends to SANE and are designed to find scanners, load their options, and produces scans in the chosen format.
+pgscan is a pair of programs with a common internal interface.  Both are front-ends to SANE and are designed to find scanners, load their options, and produce scans in the chosen format.  The main goal is to be able to drop a document in a scanner, issue a command, and scan and archive the document (and possibly metadata) as a PDF.
 
 ## Installation
 
 ```
-pip install pygtk-sane
+pip install pgscan
 ```
 
 ## Usage
@@ -28,7 +28,7 @@ pgscan &
 
 ## Copyright and License
 
-PyGTK-SANE, a Python/GTK front-end for SANE.
+pgscan, a Python/GTK front-end for SANE.
 Copyright (C) 2020 Jeremy A Gray <jeremy.a.gray@gmail.com>.
 
 This program is free software: you can redistribute it and/or modify
