@@ -1,11 +1,20 @@
+# ******************************************************************************
+#
+# pgscan, Python GTK sane frontend
+#
+# Copyright 2025 Jeremy A Gray <gray@flyquackswim.com>.
+#
+# All rights reserved.
+#
 # SPDX-License-Identifier: GPL-3.0-or-later
+#
+# ******************************************************************************
 
 [tool]
 
 [tool.black]
 
 line-length = 88
-target-version = ['py38']
 include = '\.pyi?$'
 exclude = '''
 
@@ -33,42 +42,48 @@ use_parentheses = true
 header_length = 50
 body_length = 72
 rewrap = true
-spell_check = false
+spell_check = true
 repair = false
 
 types = [
-"build",
-"ci",
-"depends",
-"docs",
-"feat",
-"fix",
-"perf",
-"refactor",
-"release",
-"style",
-"test"
+  "build",
+  "ci",
+  "depends",
+  "docs",
+  "feat",
+  "fix",
+  "perf",
+  "refactor",
+  "release",
+  "style",
+  "test"
 ]
 
 scopes = [
-"config",
-"parser"
+  "cli",
+  "gui",
+  "tooling",
 ]
 
 footers = [
-"signed-off-by"
+  "github-closes",
+  "signed-off-by",
 ]
 
 required_footers = [
-"signed-off-by"
+  "signed-off-by"
 ]
 
 [tool.poetry]
 
-authors = ["Jeremy A Gray <jeremy.a.gray@gmail.com>"]
-description = "pgscan:  GTK and CLI frontend for SANE scanning"
+authors = ["Jeremy A Gray <gray@flyquackswim.com>"]
+maintainers = ["Jeremy A Gray <gray@flyquackswim.com>"]
+description = "GTK and CLI frontend for SANE"
 name = "pgscan"
 version = "0.0.1"
+homepage = "https://github.com/jeremyagray/pgscan"
+repository = "https://github.com/jeremyagray/pgscan"
+
 
 [tool.poetry.dependencies]
 
@@ -86,13 +101,3 @@ pccc = ">=0"
 pre-commit = ">=3"
 pytest = ">=8"
 pytest-cov = ">=5"
-
-[tool.pytest.ini_options]
-
-flake8-max-complexity = 20
-flake8-max-line-length = 88
-
-flake8-ignore = [
-    "* E203, W503",
-    "__init__.py F401",
-]
