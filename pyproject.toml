@@ -87,13 +87,11 @@ repository = "https://github.com/jeremyagray/pgscan"
 
 [tool.poetry.dependencies]
 
-Pillow = ">=10,<11"
-PyGObject = ">=3,<4"
-pycairo = ">=1,<2"
-python = ">=3.10.1,<4"
+Pillow = ">=11,<12"
+python = ">=3.11.1,<4"
 python-sane = ">=2,<3"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 
 black = ">=23"
 isort = ">=5"
